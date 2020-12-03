@@ -7,7 +7,8 @@ const parseJson = (response) => response.json()
 const sendJson = (connection, json) => connection.sendUTF(JSON.stringify(json))
 const headers = {
   'Referer': 'https://repl.it/',
-  'Content-Type': 'application/json'
+  'Content-Type': 'application/json',
+  'X-Requested-With': 'XMLHttpRequest'
 }
 
 module.exports = class {
